@@ -2,3 +2,26 @@
 
 %:
 	dh $@
+
+override_dh_shlibdeps:
+	dh_shlibdeps \
+		-l/usr/lib/aarch64-linux-gnu/camx/shikra \
+		-l/usr/lib/aarch64-linux-gnu/camx/shikra/hw
+
+maintainerclean:
+	rm -r \
+		LICENSE.qcom-2 \
+		camx-entitled-headers-dev/ \
+		camx-shikra-dbgsym/ \
+		camx-shikra-dev/ \
+		camx-shikra/ \
+		libcamx-dev/ \
+		libcamx-shikra-dev/ \
+		libcamx-shikra1-dbgsym/ \
+		libcamx-shikra1/
+
+override_dh_strip:
+	# Don't strip DSP skel files
+	dh_strip --exclude=libhme_dsp_skel.so --exclude=libbitml_nsp_73nb_skel.so
+
+override_dh_dwz:

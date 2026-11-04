@@ -1,0 +1,7 @@
+# we *want* to have a custom RPATH for private shared libraries, which is
+# a valid use described in the lintian tag message.
+custom-library-search-path RUNPATH /usr/lib/aarch64-linux-gnu/camx/shikra [*]
+custom-library-search-path RUNPATH /usr/lib/aarch64-linux-gnu/camx/shikra/hw [*]
+
+# upstream does not compile with bindnow
+hardening-no-bindnow [*]
