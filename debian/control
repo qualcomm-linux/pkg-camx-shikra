@@ -8,6 +8,7 @@ Uploaders:
 Build-Depends:
  debhelper-compat (= 13),
 Build-Depends-Arch:
+ qcom-sensing-hub,
  libfastrpc1,
  libglib2.0-0,
  libopencv-dev,
