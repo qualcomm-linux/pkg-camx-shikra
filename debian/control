@@ -1,19 +1,54 @@
-Source: template
-Section: libs
+Source: camx-shikra
+Section: non-free/libs
 Priority: optional
-Maintainer: Simon Beaudoin <sbeaudoi@qti.qualcomm.com>
-Build-Depends: debhelper (>= 13)
+Maintainer: Qualcomm Camera Team <camx.deb.maintainers@qti.qualcomm.com>
+Uploaders:
+ Loïc Minier <loic.minier@oss.qualcomm.com>,
+ Agathe Porte <agathe.porte@oss.qualcomm.com>,
+Build-Depends:
+ debhelper-compat (= 13),
+Build-Depends-Arch:
+ qcom-sensing-hub,
+ libfastrpc1,
+ libglib2.0-0,
+ libopencv-dev,
+ liburm-dev,
+ libxml2-16,
+ protobuf-compiler,
 Standards-Version: 4.6.2
+Homepage: http://support.cdmatech.com
+Vcs-Browser: https://github.com/qualcomm-linux/pkg-camx-shikra
+Vcs-Git: https://github.com/qualcomm-linux/pkg-camx-shikra.git
 
-Package: template1
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: Template package
- This is an example package to demonstrate the Qualcomm OSS development flow
+Package: camx-shikra
+Architecture: arm64
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends},
+Recommends:
+ ocl-icd-libopencl1,
+ qcom-adreno-cl1,
+Description: Qualcomm CamX usermode libraries for Shikra platform
+ Core camera driver components for Shikra platform.
 
-Package: template-dev
-Section: libdevel
-Architecture: any
-Depends: template1 (= ${binary:Version}), ${misc:Depends}
-Description: Template package dev
- This is an example package to demonstrate the Qualcomm OSS development flow
+Package: libcamx-shikra1
+Architecture: arm64
+Depends:
+ camx-shikra (= ${binary:Version}),
+ ${misc:Depends},
+ ${shlibs:Depends},
+Provides:
+ camx-server-runtime-any,
+Description: Qualcomm CamX libraries for camera service
+ Set of libraries used by camera service (QMMF) for Shikra platform
+
+Package: libcamx-shikra-dev
+Section: non-free/libdevel
+Architecture: arm64
+Depends:
+ camx-shikra (= ${binary:Version}),
+ ${misc:Depends},
+Description: Dev package for CamX libraries for camera service
+ Contains unversioned so files used by camera service (QMMF)
+ for Shikra platform
+
