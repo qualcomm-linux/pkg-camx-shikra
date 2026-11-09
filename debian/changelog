@@ -1,3 +1,9 @@
+camx-shikra (1.0.59-1) UNRELEASED; urgency=medium
+
+  * New upstream release (261105)
+
+ -- Qualcomm Camera Team <camx.deb.maintainers@qti.qualcomm.com>  Fri, 06 Nov 2026 22:20:00 +0530
+
 camx-shikra (1.0.56-1) UNRELEASED; urgency=medium
 
   * Initial packaging of CamX usermode libraries for Shikra platform.
