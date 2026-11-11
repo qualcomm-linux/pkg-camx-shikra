@@ -1,8 +1,9 @@
-camx-shikra (1.0.60-1) UNRELEASED; urgency=medium
+camx-shikra (1.0.60-1) resolute; urgency=medium
 
+  [ Qualcomm Camera Team ]
   * New upstream release (260911)
 
- -- Qualcomm Camera Team <camx.deb.maintainers@qti.qualcomm.com>  Wed, 11 Nov 2026 00:00:00 +0530
+ -- GitHub Service Bot <githubservice@qti.qualcomm.com>  Wed, 11 Nov 2026 12:11:18 +0000
 
 camx-shikra (1.0.59-1) resolute; urgency=medium
 
