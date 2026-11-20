@@ -23,6 +23,7 @@ Vcs-Git: https://github.com/qualcomm-linux/pkg-camx-shikra.git
 Package: camx-shikra
 Architecture: arm64
 Depends:
+ libfastcvopt1,
  ${misc:Depends},
  ${shlibs:Depends},
 Recommends:
