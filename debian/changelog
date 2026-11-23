@@ -1,9 +1,10 @@
-camx-shikra (1.0.60-2) UNRELEASED; urgency=medium
+camx-shikra (1.0.60-2) resolute; urgency=medium
 
+  [ Qualcomm Camera Team ]
   * debian/control: camx-shikra depends on libfastcvopt1, as the snapshot
     usecase fails without it.
 
- -- Qualcomm Camera Team <camx.deb.maintainers@qti.qualcomm.com>  Fri, 20 Nov 2026 08:33:47 +0000
+ -- GitHub Service Bot <githubservice@qti.qualcomm.com>  Mon, 23 Nov 2026 11:18:36 +0000
 
 camx-shikra (1.0.60-1) resolute; urgency=medium
 
